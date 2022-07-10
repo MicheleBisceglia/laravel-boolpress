@@ -1,6 +1,9 @@
 <template>
   <div>
-    <p>Laooo, ipsum dolor sit amet consectetur adipisicing elit. Doloribus obcaecati iusto eaque magnam quisquam, est, neque ipsam possimus nisi temporibus dolorum cumque exercitationem, laborum harum asperiores tenetur consequuntur quo adipisci.</p>
+    <h1>
+      Pagina Guest Home
+    </h1>
+
   </div>
 </template>
 
@@ -10,6 +13,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  h1 {
+    text-align: center;
+    padding-top: 50px;
+  }  
 </style>
