@@ -33,6 +33,8 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
+        $request->validate($this->getValidationRules());
+
         $data = $request->all();
         $post = new Post();
         $post->fill($data);
@@ -59,6 +61,8 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function edit($id) {
+        $post = Post::findOrFail($id);
+        return view('admin.posts.edit', compact('post'));
     }
 
     /**
@@ -69,6 +73,14 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id) {
+        $request->validate($this->getValidationRules());
+
+        $data = $request->all();
+        $post = Post::findOrFail($id);
+        $post->slug = Str::slug($post->title, '-');
+        $post->update($data);
+
+        return redirect()->route('admin.posts.show', ['post' => $post->id]);
     }
 
     /**
@@ -78,7 +90,16 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy($id) {
-       
+        $post = Post::findOrFail($id);
+        $post->delete();
+        return redirect()->route('admin.posts.index');
+    }
+
+    private function getValidationRules() {
+        return [
+            'title' => 'required|max:255',
+            'content' => 'required|max:30000',
+        ];
     }
 
 }

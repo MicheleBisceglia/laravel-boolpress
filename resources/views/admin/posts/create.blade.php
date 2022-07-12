@@ -3,7 +3,7 @@
 @section('content')
     <h1>Crea un nuovo post</h1>
 
-    <form action="{{ route('admin.posts.store') }}" method="Post">
+    <form action="{{ route('admin.posts.store') }}" method="POST">
       @method('POST')
       @csrf 
       <div class="form-group row">
