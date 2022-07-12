@@ -12,7 +12,7 @@
         @csrf
         @method('DELETE')
 
-            <button class="btn btn-danger" type="submit">Cancella</button>
+            <button class="btn btn-warning text-danger border-danger" type="submit">Cancella</button>
         </form>
     </div>
     
