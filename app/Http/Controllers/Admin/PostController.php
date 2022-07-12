@@ -23,6 +23,7 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function create() {
+        return view('admin.posts.create');
     }
 
     /**
@@ -32,6 +33,12 @@ class PostController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
+        $data = $request->all();
+        $post = new Post();
+        $post->fill($data);
+        $post->slug = Post::slug($post->title, '-');
+        $post->save();
+
     }
 
     /**
