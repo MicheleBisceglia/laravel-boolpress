@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Post;
 use Illuminate\Http\Request;
-
+use illuminate\Support\Str;
 class PostController extends Controller {
     /**
      * Display a listing of the resource.
@@ -36,7 +36,7 @@ class PostController extends Controller {
         $data = $request->all();
         $post = new Post();
         $post->fill($data);
-        $post->slug = Post::slug($post->title, '-');
+        $post->slug = Str::slug($post->title, '-');
         $post->save();
 
     }
