@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-md-nowrap p-0">
+    <nav class="navbar navbar-expand-md navbar-dark bg-success flex-md-nowrap p-0">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Boolpress</a>
         <ul class="navbar-nav px-3 ml-auto">
             <li class="nav-item">
@@ -43,17 +43,17 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('admin.home') }}">
+                            <a class="nav-link text-secondary active" href="{{ route('admin.home') }}">
                                 Dashboard
                             </a>
                         </li>  
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('admin.posts.index') }}">
+                            <a class="nav-link text-secondary active" href="{{ route('admin.posts.index') }}">
                                 Elenco post
                             </a>
                         </li> 
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('admin.posts.create') }}">                                </svg>
+                            <a class="nav-link text-secondary active" href="{{ route('admin.posts.create') }}">                                </svg>
                                 Crea nuovo post
                             </a>
                         </li>  

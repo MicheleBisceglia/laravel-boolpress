@@ -28,23 +28,18 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark flex-md-nowrap p-0">
+    <nav class="navbar navbar-expand-md navbar-dark bg-success flex-md-nowrap p-0">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Boolpress</a>
         <ul class="navbar-nav px-3 ml-auto">
-            {{-- <li class="nav-item">
-                <a class="nav-link" href="{{ route('home') }}">
-                    Visita il sito
-                </a>
-            </li> --}}
               @if (Route::has('login'))
             <li class="top-right links">
                 @auth
-                    <a class="text-secondary" href="{{ route('admin.home') }}">Home</a>
+                    <a class="text-white" href="{{ route('admin.home') }}">Home</a>
                 @else
-                    <a class="text-secondary" href="{{ route('login') }}">Login</a>
+                    <a class="text-white" href="{{ route('login') }}">Login</a>
 
                     @if (Route::has('register'))
-                        <a class="text-secondary" href="{{ route('register') }}">Register</a>
+                        <a class="text-white" href="{{ route('register') }}">Register</a>
                     @endif
                 @endauth
             </li>

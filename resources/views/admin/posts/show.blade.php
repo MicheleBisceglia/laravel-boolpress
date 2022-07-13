@@ -2,6 +2,7 @@
 
 @section('content')
     <h1 class="mb-3"> {{ $post->title }} </h1>
+    <p>Categoria: {{ $post->category->name }}</p>
     <p class="mb-3">Slug: {{ $post->slug }}</p>
     <p>{{ $post->content }}</p>
 
@@ -12,7 +13,7 @@
         @csrf
         @method('DELETE')
 
-            <button class="btn btn-warning text-danger border-danger" type="submit">Cancella</button>
+            <button class="btn text-warning btn-danger" type="submit">Cancella</button>
         </form>
     </div>
     
