@@ -1,15 +1,16 @@
 <template>
   <div>
-    <h1>
-      Pagina Guest Home
-    </h1>
-
+    <PostList/>
   </div>
 </template>
 
 <script>
+import PostList from "./PostList.vue";
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    PostList
+  }
 }
 </script>
 
