@@ -1,22 +1,20 @@
 <template>
   <div>
-    <PostList/>
+    <Header />
+    <router-view></router-view>
+    <footer>Footer</footer>
   </div>
 </template>
 
 <script>
-import PostList from "./PostList.vue";
+import Header from "../components/Header.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    PostList
+    Header
   }
-}
+};
 </script>
 
-<style lang="scss" scoped>
-  h1 {
-    text-align: center;
-    padding-top: 50px;
-  }  
+<style>
 </style>

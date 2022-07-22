@@ -51,10 +51,10 @@
     width: 0.4rem;
 }
 .my_scroll::-webkit-scrollbar-thumb {
-    background-color: #2aa731;
+    background-color: gray;
     border-radius: 100vw;
 }
 .my_scroll::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(65, 197, 13, 0.753);
+    background-color: rgb(78, 77, 77);
 }
 </style>
